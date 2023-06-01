@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'apeg',
+    loadChildren: () => import('./apeg/apeg.module').then( m => m.ApegPageModule)
+  },
+  {
+    path: 'bpeg',
+    loadChildren: () => import('./bpeg/bpeg.module').then( m => m.BpegPageModule)
+  },
+  {
+    path: 'cpeg',
+    loadChildren: () => import('./cpeg/cpeg.module').then( m => m.CpegPageModule)
+  },
+  {
+    path: 'dpeg',
+    loadChildren: () => import('./dpeg/dpeg.module').then( m => m.DpegPageModule)
+  },
 ];
 
 @NgModule({
